@@ -1,0 +1,5 @@
+plugins {
+}
+
+rootProject.name = 'example'
+include('app')
