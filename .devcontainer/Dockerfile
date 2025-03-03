@@ -15,7 +15,7 @@ RUN groupadd -g ${USER_GID} devuser && \
     echo "devuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
-RUN curl -L https://api.adoptium.net/v3/binary/latest/17/ga/linux/x64/jdk/hotspot/normal/adoptium \
+RUN curl -L https://api.adoptium.net/v3/binary/latest/23/ga/linux/x64/jdk/hotspot/normal/adoptium \
 | tar xvz -C /opt/ 
 
 RUN ln -sf /opt/`ls /opt/ | grep jdk*` /opt/java \
