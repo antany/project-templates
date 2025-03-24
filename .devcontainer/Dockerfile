@@ -7,7 +7,7 @@ ARG USER_GID=${USER_UID}
 
 ENV TZ="America/New_York"
 
-RUN yes | pacman -Syu && yes | pacman -S iproute2 curl vim sudo which git
+RUN yes | pacman -Syu && yes | pacman -S iproute2 curl vim sudo which git less
 
 RUN groupadd -g ${USER_GID} devuser && \
     groupadd sudo && \
