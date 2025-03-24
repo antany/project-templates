@@ -1,14 +1,17 @@
 {
     "name": "spring-int-kafka-jdk21",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "."
-    },
+    "dockerComposeFile": [
+        "compose.yaml"
+    ],
+    "service": "dev",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
     "customizations": {
         "vscode": {
             "extensions": [
                 "vscjava.vscode-java-pack",
-                "vscjava.vscode-gradle"
+                "vscjava.vscode-gradle",
+                "ms-azuretools.vscode-docker"
             ],
             "settings": {
                 "java.compile.nullAnalysis.mode": "automatic",
