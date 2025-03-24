@@ -1,0 +1,29 @@
+{
+    "name": "spring-int-kafka-jdk21",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "vscjava.vscode-gradle"
+            ],
+            "settings": {
+                "java.compile.nullAnalysis.mode": "automatic",
+                "java.configuration.updateBuildConfiguration": "interactive",
+                "java.jdt.ls.java.home": "/opt/java/",
+                "java.import.gradle.java.home": "/opt/java/",
+                "java.configuration.runtimes": [
+                    {
+                        "name": "JavaSE-21",
+                        "path": "/opt/java/",
+                        "default": true
+                    }
+                ]
+            }
+        }
+    },
+    "remoteUser": "devuser"
+}
